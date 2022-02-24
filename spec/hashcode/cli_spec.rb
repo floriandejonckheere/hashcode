@@ -3,8 +3,6 @@
 describe HashCode::CLI do
   subject(:cli) { described_class.new(args) }
 
-  # around { |example| suppress_output { example.run } }
-
   describe "options" do
     describe "--verbose" do
       let(:args) { ["--verbose"] }
@@ -12,7 +10,7 @@ describe HashCode::CLI do
       it "turns on verbose output" do
         cli
 
-        expect(hashcode.options).to be_verbose
+        expect(HashCode.options).to be_verbose
       end
     end
 
@@ -22,7 +20,7 @@ describe HashCode::CLI do
       it "turns on debug output" do
         cli
 
-        expect(hashcode.options).to be_debug
+        expect(HashCode.options).to be_debug
       end
     end
 

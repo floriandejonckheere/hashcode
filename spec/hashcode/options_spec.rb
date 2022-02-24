@@ -8,17 +8,17 @@ RSpec.describe HashCode::Options do
 
   describe "#[]" do
     it "gets the option value" do
-      options.directory = "/foobar"
+      options.debug = true
 
-      expect(options[:directory]).to eq "/foobar"
+      expect(options[:debug]).to eq true
     end
   end
 
   describe "#[]=" do
     it "sets the option value" do
-      options[:directory] = "/foobar"
+      options[:debug] = true
 
-      expect(options.directory).to eq "/foobar"
+      expect(options.debug).to eq true
     end
   end
 end
