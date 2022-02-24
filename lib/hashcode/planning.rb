@@ -4,11 +4,12 @@ module HashCode
   class Planning
     attr_reader :projects
 
-    def initialize(projects)
+    def initialize(contributors, projects)
+      @contributors = contributors
       @projects = projects
     end
 
-    def score
+    def solve!
       raise NotImplementedError
     end
   end

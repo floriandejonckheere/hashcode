@@ -9,6 +9,18 @@ module HashCode
     end
 
     def start
+      contributors, projects = parse!
+
+      planning = Planning.new(contributors, projects)
+
+      solution = planning.solve!
+
+      File.write("solution.txt", solution.to_s) if solution
+    end
+
+    private
+
+    def parse!
       number_of_contributors, number_of_projects = iterator.next.split(" ").map(&:to_i)
 
       contributors = number_of_contributors.times.map do |i|
@@ -45,7 +57,7 @@ module HashCode
         project
       end
 
-      binding.break
+      return [contributors, projects]
     end
 
     def iterator
