@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 
 rm hashcode.zip
-zip -x hashcode.zip -x '.git/*' -x '.idea/*' -r hashcode.zip .
+zip -x hashcode.zip -x '.git/*' -x '.idea/*' -x 'spec/*' -x 'res/*' -x 'coverage/*' -r hashcode.zip .
