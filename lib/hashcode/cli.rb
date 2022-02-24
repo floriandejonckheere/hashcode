@@ -33,7 +33,9 @@ module HashCode
     end
 
     def start
-      raise NotImplementedError
+      Application
+        .new(HashCode.root.join("res/a_an_example.in.txt"))
+        .start
     rescue UsageError => e
       # Don't print tail if no message was passed
       return usage if e.message == e.class.name
