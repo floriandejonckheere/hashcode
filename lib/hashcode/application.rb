@@ -13,7 +13,7 @@ module HashCode
 
       planning = Planning.new(contributors, projects)
 
-      solution = planning.solve!
+      solution = planning.solve
 
       File.write("solution.txt", solution.to_s) if solution
     end

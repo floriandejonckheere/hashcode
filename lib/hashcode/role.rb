@@ -2,10 +2,11 @@
 
 module HashCode
   class Role
-    attr_reader :skill, :level, :project
+    attr_reader :name, :level, :project
+    attr_accessor :contributor
 
-    def initialize(skill, level, project)
-      @skill = skill
+    def initialize(name, level, project)
+      @name = name
       @level = level
       @project = project
     end

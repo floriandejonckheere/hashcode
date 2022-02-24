@@ -2,7 +2,8 @@
 
 module HashCode
   class Skill
-    attr_reader :name, :level, :contributor
+    attr_reader :name, :contributor
+    attr_accessor :level
 
     def initialize(name, level, contributor)
       @name = name
