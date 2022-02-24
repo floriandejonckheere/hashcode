@@ -6,6 +6,8 @@ module HashCode
 
     def filename=(value)
       @filename = HashCode.root.join("res/#{value}.txt")
+
+      puts @filename
     end
 
     def filename

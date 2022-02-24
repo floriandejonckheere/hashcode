@@ -67,6 +67,8 @@ module HashCode
 
         time += active_projects.min { |p| p.end_time }.days
       end
+
+      Solution.new(active_projects)
     end
   end
 end

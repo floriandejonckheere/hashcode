@@ -36,6 +36,10 @@ module HashCode
       end
     end
 
+    def calculated_score
+      score - [end_time - best_before, 0].max
+    end
+
     def ==(other)
       name == other.name
     end

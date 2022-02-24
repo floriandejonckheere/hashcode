@@ -15,7 +15,7 @@ module HashCode
 
       solution = planning.solve
 
-      File.write("solution.txt", solution.to_s) if solution
+      File.write(HashCode.options.filename.to_s.gsub("in", "sol"), solution.to_s) if solution
     end
 
     private
