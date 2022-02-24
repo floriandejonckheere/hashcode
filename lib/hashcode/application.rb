@@ -48,6 +48,8 @@ module HashCode
 
         project
       end
+
+      binding.break
     end
 
     def lines

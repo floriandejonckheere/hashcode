@@ -2,6 +2,7 @@
 
 require "active_support/all"
 require "zeitwerk"
+require "debug"
 
 require "byebug" if ENV["ENV"] == "development"
 
