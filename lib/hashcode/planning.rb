@@ -7,5 +7,9 @@ module HashCode
     def initialize(projects)
       @projects = projects
     end
+
+    def score
+      raise NotImplementedError
+    end
   end
 end

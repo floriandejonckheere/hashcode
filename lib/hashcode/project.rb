@@ -2,9 +2,10 @@
 
 module HashCode
   class Project
-    attr_reader :name, :days, :score, :best_before, :roles
+    attr_reader :name, :days, :score, :best_before
+    attr_accessor :roles
 
-    def initialize(name, days, score, best_before, roles)
+    def initialize(name, days, score, best_before, roles = [])
       @name = name
       @days = days
       @score = score

@@ -2,7 +2,8 @@
 
 module HashCode
   class Contributor
-    attr_reader :name, :skills
+    attr_reader :name
+    attr_accessor :skills
 
     def initialize(name, skills = [])
       @name = name
