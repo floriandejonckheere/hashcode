@@ -10,6 +10,7 @@ module HashCode
     def initialize(args)
       @parser = OptionParser.new("#{File.basename($PROGRAM_NAME)} [global options] command") do |o|
         o.on("Global options:")
+        o.on("-f", "--file=FILENAME", "Input filename")
         o.on("-v", "--verbose", "Turn on verbose logging")
         o.on("-D", "--debug", "Turn on debug logging")
         o.on("-h", "--help", "Display this message") { usage }

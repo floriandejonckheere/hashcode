@@ -4,6 +4,14 @@ module HashCode
   class Options
     attr_accessor :help
 
+    def filename=(value)
+      @filename = HashCode.root.join("res/#{value}.txt")
+    end
+
+    def filename
+      @filename ||= HashCode.root.join("res/a_an_example.in.txt")
+    end
+
     def verbose=(value)
       @verbose = value.present?
     end
